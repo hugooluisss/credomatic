@@ -18,8 +18,8 @@
 $key = "FPSuRTA8k73mWge8z25gUcb9M35kqqq6";
 $key_id = "7129030";
 $hora = time();
-$orden = "Orden".date("YmdHis");
-$monto = sprintf("%0.2f", 10);
+$orden = "Orden_".date("YmdHis");
+$monto = sprintf("%0.2f", 32);
 $hash = md5($orden.'|'.$monto.'|'.$hora.'|'.$key);
 ?>
 		<div class="container">
@@ -91,7 +91,7 @@ $hash = md5($orden.'|'.$monto.'|'.$hora.'|'.$key);
 							</select>
 						</div>
 						<input type="hidden" name="orderid" value="<?= $orden ?>" id="orderid">
-						<!--<input type="hidden" name="redirect" value="http://10.3.1.119/washeda/components/com_register/paymentvalidator.php" id="redirect">-->
+						<input type="hidden" name="redirect" value="http://cpymes.com.mx/ruddy/paymentvalidator.php" id="redirect">
 						<button type="submit" class="btn btn-danger">Enviar</button>
 					</form>
 					<br />
